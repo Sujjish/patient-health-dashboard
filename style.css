@@ -1,0 +1,78 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #F8FBFD;
+  color: #333;
+}
+
+#sidebar {
+  min-width: 220px;
+  max-width: 220px;
+  background-color: #2E8BC0; /* Calm medical blue */
+  min-height: 100vh;
+}
+#sidebar h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #fff;
+}
+#sidebar .nav-link {
+  font-size: 1rem;
+  margin-bottom: 12px;
+  color: #fff;
+}
+#sidebar .nav-link:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+}
+
+.card {
+  border: none;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.card h5 {
+  color: #0E5E6F; 
+}
+.card p {
+  color: #444;
+}
+
+.health-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+.health-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+  background-color: #E6F7F9; 
+}
+
+.header {
+  background: #fff;
+  border-bottom: 2px solid #E3F2F7;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header h4 {
+  color: #0E5E6F;
+}
+.header .fa-bell {
+  color: #2E8BC0;
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  #sidebar {
+    position: fixed;
+    left: -220px;
+    top: 0;
+    transition: left 0.3s ease;
+    z-index: 1000;
+  }
+  #sidebar.active {
+    left: 0;
+  }
+}
